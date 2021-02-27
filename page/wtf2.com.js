@@ -9,7 +9,24 @@
       selected_comic: null
     },
     mount: function() {
-      return this.comic_select(0);
+      this.comic_select(0);
+      return document.addEventListener("keydown", this.handler = (function(_this) {
+        return function(e) {
+          var idx;
+          switch (e.keyCode) {
+            case Keymap.PAGEDOWN:
+              e.preventDefault();
+              e.stopPropagation();
+              idx = _this.state.selected_comic_idx + 1;
+              if (wtf_list[idx] != null) {
+                _this.comic_select(idx);
+              }
+          }
+        };
+      })(this));
+    },
+    unmount: function() {
+      return document.removeEventListener("keydown", this.handler);
     },
     comic_select: function(idx) {
       return this.set_state({
