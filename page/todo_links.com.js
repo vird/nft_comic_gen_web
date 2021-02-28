@@ -63,7 +63,7 @@
                 }, function() {
                   var section_offset;
                   section_offset = 20;
-                  return table(function() {
+                  table(function() {
                     return tbody(function() {
                       tr(function() {
                         td("source");
@@ -78,6 +78,53 @@
                         return td(a({
                           href: "https://vird.github.io/nft_comic_gen_web/"
                         }, "https://vird.github.io/nft_comic_gen_web/"));
+                      });
+                    });
+                  });
+                  div({
+                    style: {
+                      height: 20
+                    }
+                  });
+                  return div(function() {
+                    div("Команда");
+                    div(function() {
+                      return span("Глушковский Сергей");
+                    });
+                    return div({
+                      style: {
+                        paddingLeft: section_offset
+                      }
+                    }, function() {
+                      div(function() {
+                        img({
+                          src: "img/favicon_github.png",
+                          style: {
+                            width: 16,
+                            height: 16,
+                            position: "relative",
+                            top: 2
+                          }
+                        });
+                        span(" ");
+                        return a({
+                          href: "https://github.com/vird"
+                        }, "github.com/vird");
+                      });
+                      return div(function() {
+                        img({
+                          src: "img/favicon_facebook.png",
+                          style: {
+                            width: 16,
+                            height: 16,
+                            position: "relative",
+                            top: 2
+                          }
+                        });
+                        span(" ");
+                        return a({
+                          href: "https://facebook.com/virdvird"
+                        }, "facebook.com/virdvird");
                       });
                     });
                   });

@@ -46,12 +46,18 @@
                   fontSize: 100
                 }
               }, "Дичь");
-              return div({
+              div({
                 style: {
                   color: theme.GRAY_OPT,
                   fontSize: 20
                 }
               }, "Теперь с комиксами");
+              return div({
+                style: {
+                  paddingTop: 20,
+                  fontSize: 30
+                }
+              }, "Изначальная идея: интерактивные комиксы с use case'ами для смарт контрактов");
             });
           });
         };
