@@ -16,7 +16,8 @@
       ev.on("storage_load", this.handler = (function(_this) {
         return function() {
           _this.force_update();
-          return _this.title_refresh();
+          _this.title_refresh();
+          return _this.comic_select(0);
         };
       })(this));
       this.title_refresh();
@@ -60,7 +61,7 @@
                       return encoded = arguments[1];
                     };
                   })(),
-                  lineno: 18
+                  lineno: 19
                 }));
                 __iced_deferrals._fulfill();
               })(function() {
@@ -88,6 +89,9 @@
       var content, content_arr, content_json, def, encoded, err, ___iced_passed_deferral, __iced_deferrals, __iced_k;
       __iced_k = __iced_k_noop;
       ___iced_passed_deferral = iced.findDeferral(arguments);
+      if (!window.storage) {
+        return;
+      }
       this.set_state({
         selected_comic_idx: idx,
         load_in_progress: true
@@ -105,7 +109,7 @@
                 return encoded = arguments[1];
               };
             })(),
-            lineno: 33
+            lineno: 35
           }));
           __iced_deferrals._fulfill();
         });
